@@ -1,6 +1,6 @@
 type Method = "GET" | "POST" | "PUT";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "").replace(/\/+$/, "");
 
 /**
  * A wrapper around the built-in `fetch()` function that abstracts away some of
