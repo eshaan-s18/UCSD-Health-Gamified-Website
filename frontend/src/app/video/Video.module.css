@@ -5,7 +5,8 @@
   background-color: var(--Pastel-Green, #faffea);
   width: 100%;
   overflow-x: auto;
-  height: 100vh;
+  overflow-y: auto;
+  min-height: 100vh;
 }
 
 .title {
