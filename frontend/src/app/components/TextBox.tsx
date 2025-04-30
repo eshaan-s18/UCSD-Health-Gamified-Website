@@ -87,7 +87,7 @@ export function TextBox({
       <div>
         {error && (
           <div className={styles.error}>
-            <Image src="/red_exclamation.svg" alt="Warning!" width={12} height={12} />
+            <Image src="/red_exclamation.svg" alt="Warning!" width={20} height={20} />
             <p>{error}</p>
           </div>
         )}

@@ -17,9 +17,7 @@ export const createUserValidator = [
     .withMessage("Email is required")
     .bail()
     .isEmail()
-    .withMessage("Invalid email format")
-    .bail()
-    .normalizeEmail(),
+    .withMessage("Invalid email format"),
 ];
 
 // Validator for updating user info
@@ -29,13 +27,11 @@ export const updateUserValidator = [
     .withMessage("Email parameter is required")
     .bail()
     .isEmail()
-    .withMessage("Invalid email format")
-    .bail()
-    .normalizeEmail(),
+    .withMessage("Invalid email format"),
 
   body("name").optional().isString().withMessage("Name must be a string"),
 
-  body("email").optional().isEmail().withMessage("Invalid email format").bail().normalizeEmail(),
+  body("email").optional().isEmail().withMessage("Invalid email format"),
 
   body("module").optional().isString().withMessage("Module must be a string"),
 ];

@@ -105,17 +105,17 @@
   }
 
   .sidebar {
-    visibility: hidden;
+    display: none;
   }
 
   .icons {
-    visibility: hidden;
+    display: none;
   }
 
   .certificate {
     visibility: visible;
     transform-origin: top left; /* Ensure it scales from top-left */
-    transform: translateX(-288px) translateY(-100px) scale(1.33);
+    transform: translateX(-130px) translateY(-115px) scale(1.33);
     box-shadow: none;
   }
 

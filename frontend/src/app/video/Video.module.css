@@ -4,6 +4,7 @@
   align-items: center;
   background-color: var(--Pastel-Green, #faffea);
   width: 100%;
+  overflow-x: auto;
   height: 100vh;
 }
 
@@ -16,6 +17,7 @@
   line-height: 150%; /* 60px */
   letter-spacing: 0.8px;
   padding-bottom: 32px;
+  overflow-x: auto;
 }
 
 .titleContainer {
@@ -28,19 +30,33 @@
   width: 854px;
   height: 480px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
   align-items: center;
+  white-space: nowrap;
+}
+
+.wrapper {
+  width: 854px;
+  overflow-x: auto;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: stretch; */
+  overflow-x: auto;
   width: 854px;
 }
 
 .buttonContainer {
   padding-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: red; */
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .buttonInitial {

@@ -95,7 +95,7 @@ export default function Certificate({ name }: CertificateNameProps) {
           />
 
           <p ref={nameRef} className={styles.name}>
-            {capitalizeWords("kevin wu")}
+            {capitalizeWords(name)}
           </p>
 
           <Image
