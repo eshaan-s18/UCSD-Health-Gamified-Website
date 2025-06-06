@@ -1,0 +1,100 @@
+.center {
+  text-align: center;
+}
+
+.signalRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.signalButton {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+.signalButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.signalButton:hover .signalIcon,
+.signalButton:focus .signalIcon {
+  transform: scale(1.08);
+  transition: transform 0.18s;
+}
+
+.signalIcon {
+  transition: transform 0.18s;
+  display: block;
+}
+
+.signalIconWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.signalTextBox {
+  margin-top: 4rem;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 1000px;
+  min-height: 215px;
+  height: 215px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #faffea;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.2s;
+  border-radius: 8px;
+
+  /* Level 2 */
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  color: #000;
+  text-align: center;
+
+  /* Title/XSmall (Reg) */
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  letter-spacing: 0.36px;
+}
+
+.label {
+  color: #000;
+  text-align: center;
+
+  /* Title/Medium (Bold) */
+  font-family: "DM Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 42px */
+  letter-spacing: 0.56px;
+}
+
+.signalTextBoxHidden {
+  margin-top: 4rem;
+  opacity: 0;
+  pointer-events: none;
+  min-height: 215px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}

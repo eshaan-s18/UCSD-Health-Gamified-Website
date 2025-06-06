@@ -1,0 +1,54 @@
+.buttonSlide {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Allows absolute positioning of the moving blob */
+  /* width: 85%; */
+  margin: auto;
+  border: 2px solid #bbd567;
+  border-radius: 64px;
+  /* margin-bottom: 32px; */
+  /* margin-top: 40px; */
+  overflow: hidden; /* Prevents overflow from transition */
+}
+
+.button {
+  flex: 1; /* Makes buttons equally spaced */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 214px;
+  height: 52px;
+  border-radius: 64px;
+  padding: 8px 40px 8px 40px;
+  color: #b4b4b4;
+  font-family: "DM Sans";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 2%;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 1; /* Ensure text is above the moving blob */
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button.active {
+  color: #000; /* Active button text color */
+  transition: color 0.4s ease;
+}
+
+.movingBlob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(100% / 4); /* Adjust depending on number of buttons */
+  background-color: #bbd567; /* Green blob */
+  border-radius: 68px;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0; /* Behind the buttons */
+}

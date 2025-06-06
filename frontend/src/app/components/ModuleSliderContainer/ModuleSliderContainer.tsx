@@ -47,7 +47,8 @@ export default function ModuleSliderContainer({
             style={{ opacity: currentSection === index && !isTransitioning ? 0 : 1 }}
           ></div>
           <div className={styles.section_wrapper}>
-            {cloneElement(child)}
+            {/* {cloneElement(child)} */}
+            {cloneElement(child, { key: currentSection })}
             <ModuleButtons
               currentSection={index}
               childrenCount={childrenCount}

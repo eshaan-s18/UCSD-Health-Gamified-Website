@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+.infoCard {
+  /* background-color: antiquewhite;
+  border-radius: 20px; */
+
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+
+  margin: auto;
+  width: 962px;
+  opacity: 0;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 88px;
+}
+
+.infoCard.active {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  gap: 58px;
+  align-items: flex-start;
+}
+
+.container.active {
+  opacity: 1;
+}
+
+.content {
+  flex: 1;
+  color: #000;
+  display: flex;
+  width: 260px;
+  padding: 30px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.content p {
+  font-family: "DM Sans";
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150% !important;
+}
+
+.content h1 {
+  font-family: "DM Sans";
+  font-weight: 700 !important;
+  line-height: 150%;
+  font-size: 30px !important;
+  letter-spacing: 2%;
+  padding-bottom: 8px;
+}
+
+.image {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* width: 381px !important; */
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
+
+.number {
+  font-family: "Rubik";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 150%;
+  color: white;
+  background: #1c3a29;
+  border-radius: 100px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}

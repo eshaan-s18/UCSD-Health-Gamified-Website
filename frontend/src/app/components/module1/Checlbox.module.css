@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topContent {
+  display: flex;
+  gap: 80px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.outerRectangle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #bbd567;
+  border-radius: 8px;
+  padding: 2rem 1.25rem;
+  min-height: 423px;
+}
+
+.innerRectangle {
+  width: 286px;
+  height: 100%;
+  background-color: #faffea;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textRectangle {
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-40%);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.25rem 0.75rem;
+  background-color: #1c3a29;
+  border-radius: 8px;
+  position: absolute;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 36px;
+  cursor: pointer;
+  gap: 1rem;
+  color: #000000;
+}
+
+.checkboxInput {
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkboxInput:checked {
+  border-color: #7aa000;
+  background-color: transparent;
+}
+
+.checkboxInput:checked::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='none' xmlns:v='https://vecta.io/nano'%3E%3Cpath fill-rule='evenodd' d='M21.887.172a1.25 1.25 0 0 1 .442 1.712l-11.812 20a1.25 1.25 0 0 1-.906.602 1.25 1.25 0 0 1-1.034-.335L.386 14.312a1.25 1.25 0 0 1-.038-1.768 1.25 1.25 0 0 1 1.768-.038l7.05 6.752L20.174.615a1.25 1.25 0 0 1 .764-.575 1.25 1.25 0 0 1 .947.134' fill='%237aa000'/%3E%3C/svg%3E");
+  width: 23px;
+  height: 23px;
+  font-size: 30px;
+  color: #7aa000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkedText {
+  color: #7aa000;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.selectedRectangle {
+  height: 114px;
+  width: 631px;
+  padding: 1.875rem 1.25rem;
+  background-color: #bbd567;
+  border-radius: 16px;
+  font-family: "DM Sans";
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.selectedRectangle.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popupHeader {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  font-family: "DM Sans";
+  text-align: left;
+  width: 100%;
+}
+
+.popupText {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "DM Sans";
+  color: #000000;
+  text-align: left;
+  width: 100%;
+}

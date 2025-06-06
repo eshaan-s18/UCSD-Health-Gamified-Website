@@ -1,0 +1,50 @@
+.container > p {
+  margin-top: 1rem;
+}
+
+.header_container {
+  font-family: "Rammetto One", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 23ch;
+  margin-inline: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.svg {
+  border-radius: 4px !important;
+}
+
+.cardLeft,
+.cardRight {
+  border-radius: 8px;
+  background: #faffea;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px 26px;
+  min-width: 192px;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  color: var(--Secondary-Accent1, #1c3a29);
+
+  /* Body/XSmall (Reg) */
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+
+.cardRight {
+  left: 160%;
+}
+
+.cardLeft {
+  right: 160%;
+}
