@@ -19,8 +19,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "UCSD Health | E Bike Safety",
-  description: "UCSD Health E Bike Safety Certification Website.",
+  title: "RideReadySD | E Bike Safety",
+  description: " RideReadySD E Bike Safety Certification Website.",
 };
 
 export default function RootLayout({
