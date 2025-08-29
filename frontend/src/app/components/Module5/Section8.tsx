@@ -49,8 +49,8 @@ export default function Section8() {
         <Image src={"./timmy-ticket.svg"} alt="Timmy getting ticketed" width={118} height={107} />
         <p>
           You can and will get a ticket for having a passenger on a bike that doesn’t have a
-          dedicated seat and foot pegs designed for a passenger! If the passenger is under 18 years
-          old, riding without a helmet is also against the law.
+          dedicated seat and foot pegs designed for a passenger! If under 18 years old, riding
+          without a helmet is also against the law.
         </p>
       </div>
     </section>
