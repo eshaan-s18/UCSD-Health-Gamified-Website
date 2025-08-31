@@ -75,7 +75,12 @@ export default function Sidebar({ isHomePage = false, currentlyOn = null }: Side
       const headers: Record<string, string> | undefined = token
         ? { Authorization: `Bearer ${token}` }
         : undefined;
-      await put(`/api/user/update/${currentUser.email}`, { module: 1 }, headers);
+      const email = currentUser?.email;
+      if (!email) {
+        showErrorToast("Error restarting course. Please try again.");
+        return;
+      }
+      await put(`/api/user/update/${email}`, { module: 1 }, headers);
       window.location.reload();
     } catch (error) {
       showErrorToast("Error restarting course. Please try again.");
