@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { put } from "../../api/requests";
 import { useAuth } from "../../contexts/AuthContext";
 import { auth } from "../../firebase-config.js";
 import { showErrorToast } from "../../utils/toastUtils";
@@ -13,9 +14,11 @@ import { LogoutButton } from "./LogoutButton";
 import { MapButton } from "./MapButton";
 import { Modules } from "./Modules";
 import { ProgressBar } from "./ProgressBar";
+import { RestartCourseButton } from "./RestartCourseButton";
 import styles from "./Sidebar.module.css";
 
 import type { User } from "../../api/user";
+
 type SidebarProps = {
   isHomePage?: boolean;
   currentlyOn?: number | null;
@@ -60,6 +63,25 @@ export default function Sidebar({ isHomePage = false, currentlyOn = null }: Side
     }
   };
 
+  const handleRestartCourse = async () => {
+    if (
+      !window.confirm(
+        "Are you sure you want to restart the course?\nYou will lose all your progress.",
+      )
+    )
+      return;
+    try {
+      const token = await auth.currentUser?.getIdToken();
+      const headers: Record<string, string> | undefined = token
+        ? { Authorization: `Bearer ${token}` }
+        : undefined;
+      await put(`/api/user/update/${currentUser.email}`, { module: 1 }, headers);
+      window.location.reload();
+    } catch (error) {
+      showErrorToast("Error restarting course. Please try again.");
+    }
+  };
+
   return (
     <nav className={`${styles.nav} ${isCollapsed ? styles.collapsed : ""}`}>
       <button
@@ -90,6 +112,14 @@ export default function Sidebar({ isHomePage = false, currentlyOn = null }: Side
         }}
         isHomePage={isHomePage}
       />
+      {user?.module === 10 && (
+        <RestartCourseButton
+          isCollapsed={isCollapsed}
+          handleClick={() => {
+            void handleRestartCourse();
+          }}
+        />
+      )}
       <Modules
         currentModule={user?.module}
         isCollapsed={isCollapsed}

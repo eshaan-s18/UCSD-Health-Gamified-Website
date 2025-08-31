@@ -1,53 +1,40 @@
 .button {
-  margin-top: 50px;
+  margin-top: 15px;
   display: flex;
   width: 100%;
   height: 48px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   border-radius: 8px;
+  gap: 8px;
   border: none;
   background: var(--color-action-submit);
   cursor: pointer;
   transition: gap 0.3s ease-in-out;
+}
+
+.button.collapsed {
+  gap: 0;
+}
+
+.primary {
   border: 1px solid #fff;
   color: #fff;
   font-weight: 400;
   line-height: 24px;
 }
 
-.button.collapsed {
-  margin-top: 37px;
-  gap: 0;
-}
-
-.button:hover {
+.primary:hover {
   background: #edf9c4;
   color: #1c3a29;
   font-weight: 700;
   line-height: 27px;
 }
 
-.button:active {
-  border: 1px solid #bbd567;
-  background: #bbd567;
-  color: #1c3a29;
-  font-weight: 700;
-  line-height: 27px;
-}
-
-.homePage {
-  border: 1px solid #bbd567;
-  background: #bbd567;
-  color: #1c3a29;
-  font-weight: 700;
-  line-height: 27px;
-}
-
 .text {
-  margin-top: 2px;
+  margin-top: 1px;
+
   text-align: center;
   /* Title/XSmall */
   font-family: "DM Sans";
@@ -55,7 +42,6 @@
   font-style: normal;
   opacity: 1;
   overflow: hidden;
-  max-width: 50px;
   transition:
     color 0.3s ease,
     opacity 0.3s ease-in-out,

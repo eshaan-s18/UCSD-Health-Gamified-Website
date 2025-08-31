@@ -6,7 +6,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   border-radius: 8px;
   border: none;
   background: var(--color-action-submit);
@@ -33,6 +33,7 @@
 }
 
 .text {
+  margin-top: 1px;
   text-align: center;
   /* Title/XSmall */
   font-family: "DM Sans";
