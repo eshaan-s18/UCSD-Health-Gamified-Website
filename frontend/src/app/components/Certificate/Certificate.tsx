@@ -56,7 +56,7 @@ export default function Certificate({ name, certificateRef }: CertificateNamePro
   return (
     <main>
       <div ref={certificateRef} className={styles.container}>
-        <Image src="/certificate/CertificateSVG.svg" alt="Certificate" fill />
+        <Image src="/certificate/UpdatedCertificateSVG.svg" alt="Certificate" fill />
         <Image
           src="/certificate/JustinSignature.png"
           alt="Date"
