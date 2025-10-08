@@ -8,7 +8,7 @@
 
 .name {
   left: 39.5%;
-  top: 43%;
+  top: 44%;
   position: absolute;
   z-index: 0;
   width: 440px;
@@ -27,13 +27,13 @@
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  left: 40%;
-  bottom: 27%;
+  left: 39.5%;
+  bottom: 31%;
 }
 
 .signaturePic {
   position: absolute;
-  bottom: 27%;
+  bottom: 31%;
   right: 8.5%;
   -webkit-user-drag: none;
   -webkit-user-select: none;
