@@ -26,7 +26,7 @@ export default function Home() {
   if (isLoading) {
     return (
       <div className={styles.loader}>
-        <p>Loading... This may take a minute.</p>
+        <p>Loading...</p>
       </div>
     );
   }
